@@ -13,3 +13,8 @@ ROI generation involved three steps of
 (2) Use of FSL to project coordinates identified in step 1 onto a blank template in MNI standard space (https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSL)
 
 (3) Inport niftii file generated in FSL into 3DSlicer (https://www.slicer.org/wiki/Modules:MeshContourSegmentation-Documentation-3.6) and use the convex wrap function to envelope the coordinates from Step 2 with a convex (or concave if that is your intention) hull.  
+
+
+Poster: https://www.researchgate.net/publication/283041124_Isolating_regions_involved_in_conflict_monitoring_and_cognitive_control_A_multi-modal_approach_to_reducing_variability_in_regions_of_interest
+
+Dissertation showing practical example: https://escholarship.mcgill.ca/concern/theses/2b88qf56v
