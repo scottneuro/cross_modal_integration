@@ -263,7 +263,14 @@ cat("affinity propogation optimal number of clusters:", length(RD_clus_ADJ@clust
 plot(RD_clus_ADJ, R_DLPFC_DF_ADJ)
 RD_clus_ADJ
 
+#At this point, you should have two sets of coordinates. Each set should contain a set of coordinates reflecting sub regions that reflect functionally connected regions of the brain. In each set, the defined coordinate sets make up your target cluster that you will use in Step 2 in FSL
 
+#For three dimensional images (non-time series) use the following code that generates regions of interest on a blank MNI template.
+#Please check out videos by Andrew Jahn for more detail (http://andysbrainblog.blogspot.com/2013/04/fsl-tutorial-creating-rois-from.html)
+#repeat for as many coordinates you have in your identified cluster
+fslmaths inputimagename.nii.gz -mul 0 -add 1 -roi x 1 y 1 z 1 0 1 output.nii.gz -odt float
+	
+#Enter the output image (output.nii.gz) into 3dSlicer (https://www.slicer.org/wiki/Modules:MeshContourSegmentation-Documentation-3.6) and cover using a convex hull
 
 
 
